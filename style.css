@@ -1,0 +1,157 @@
+:root{
+    /* primary colors */
+    --crl-primary-red: hsl(0, 78%, 62%);
+    --crl-primary-cyan: hsl(180, 62%, 55%);
+    --crl-primary-orange: hsl(34, 97%, 64%);
+    --crl-primary-blue: hwb(212 33% 5%);
+
+    /* Neutral color */
+    --crl-neutral-Very-Dark-Blue: hsl(234, 12%, 34%);
+    --crl-neutral-Grayish-Blue: hsl(229, 6%, 66%);
+    --crl-neutral-Very-Light-Gray: hsl(0, 0%, 98%);
+  
+    /* Typography */
+    --ff: 'Poppins', sans-serif;
+    --fs: 0.9375rem; 
+    --fw-200:200;
+    --fw-400: 400;
+    --fw-600:600;
+}
+/* css reseting rules */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Make images easier to work with */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* styling our four-card-feature-section */
+
+body{
+    font-family: var(--ff);
+    font-size: var(--fs);
+    font-weight: var(--fw-200);   
+    background-color: var(--crl-neutral-Very-Light-Gray);
+}
+
+section, article{
+    max-width: 400px;
+    margin: auto; 
+    margin-bottom: 1.5rem;  
+    
+}
+section:first-child{
+    
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+}
+section h1{
+    font-weight: var(--fw-400);   
+}
+h1, h2, section p{
+    padding-left: 1rem;
+}
+section h2, article h3{
+    font-weight: var(--fw-600);
+}
+article h3{
+    padding-top: 1rem;
+    padding-left: 2rem;  
+}
+article p{
+    padding: 0 2rem;
+}
+figure img{
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+}
+figure{
+    
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;   
+}
+/* different border colors */
+.supervisor{
+    border-top: 5px solid var(--crl-primary-cyan);
+}
+.team-builder{
+    border-top: 5px solid var(--crl-primary-red);
+}
+.karma{
+    border-top: 5px solid var(--crl-primary-orange);
+}
+.calculator{
+    border-top: 5px solid var(--crl-primary-blue);
+}
+/* styling box-shadow for the article elements */
+article{
+    box-shadow: 0 0px 40px var(--crl-neutral-Grayish-Blue);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+/* desktop layout design */
+
+@media(min-width:900px){
+   .cards{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      
+      margin-top: 5rem;
+      
+    }
+    .article-column{
+        display: flex;
+        flex-direction: column;   
+    }
+article{
+    min-width: 400px;
+}
+}
+
+
+
+
